@@ -7,12 +7,12 @@
                         <div class="col-md-12 col-lg-12">
                             <label for="">Username : </label>
                             <input class="form-control" formControlName="customerEmail" type="text" >
-                            <div class="invalid-feedback">
+                            
                             <small class="message-error"
                             *ngIf="!!Email.errors?.required  && Email.touched">Please choose a Email</small>
                             <small class="message-error"
                             *ngIf="!!Email.errors?.minlength">Please input Email More than 10 characters</small>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="row">
@@ -49,10 +49,13 @@
                     <div class="row">
                         <div class="col-md-12 col-lg-12">
                             <label for="">Birdday : </label>
-                            <input class="form-control" formControlName="customerBirthDay" type="date">
-                            <div class="invalid-feedback">
+                            <input class="form-control" formControlName="customerBirthDay" type="date"
+                            [ngClass]="{ 'is-invalid': form_birtday.controls.customerBirthDay.errors}">
+                            <small class="message-error"
+                                *ngIf="!form_birtday.errors?.required && form_birtday.errors?.touched">**กรุณากรอกเบอร์โทร</small>
+                            <!-- <div class="invalid-feedback">
                                 Please choose a Birdday.
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -75,16 +78,10 @@
                     <div class="col-md-12 col-lg-12">
                         <label for="">Tel : </label>
                         <div formArrayName="credentials" *ngFor="let creds of credentials.controls; let i = index;">
-                            <div class="invalid-feedback">
-                                        <small class="message-error"
-                                         *ngIf="!!credentials.errors?.required  && credentials.touched"> Please choose a Tel.</small>
-                                         <!-- <small class="message-error"
-                                         *ngIf="!!this.form.get('customerPhone').errors?.pattern">Please input Number orly.</small>
-                                         <small class="message-error"
-                                         *ngIf="!!this.form.get('customerPhone').errors?.minlength">Please input Email More than 10 characters</small> -->
-                            </div> 
                             <ng-container [formGroupName]="i">
-                                <div class="inputarray"><input class="form-control" formControlName="customerPhone" type="text">
+                                <div class="inputarray">
+                                    <input class="form-control"  formControlName="customerPhone" type="text"
+                                    [ngClass]="{ 'is-invalid': credentials }">
                                     <div *ngIf="i === 0" class="icon">   
                                         <span class="fa fa-plus fa-lg" (click)="addPhone()"></span>
                                     </div>
@@ -92,6 +89,8 @@
                                         <span class="fa fa-times fa-lg" (click)="Remove(i)"></span>
                                     </div>
                                 </div>
+                                <small class="message-error"
+                                *ngIf="!credentials.errors?.required && credentials.errors?.touched">**กรุณากรอกเบอร์โทร</small>
                             </ng-container>
                         </div>
                     </div>
@@ -113,5 +112,5 @@
             </div>
         </div>
     </section>
-    {{form.value | json}}
+    {{this.credentials.getRawValue().values()}}
     

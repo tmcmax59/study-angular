@@ -71,6 +71,5 @@ export class RegisterComponent implements OnInit {
   }
   get form_birtday(): any { return this.form.get('form_birtday') as FormGroup; }
   get Email(): any { return this.form.get('customerEmail'); }
-
   get credentials() { return this.form.get('credentials') as FormArray; }
 }
