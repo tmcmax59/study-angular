@@ -8,7 +8,7 @@ import { HttpService } from 'src/app/core/service/http-insert.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  constructor(private builder: FormBuilder, private http: HttpService) { 
+  constructor(private builder: FormBuilder, private http: HttpService) {
   }
   regisform: RegisterForm;
   form: FormGroup;
@@ -31,30 +31,30 @@ export class RegisterComponent implements OnInit {
     if (this.form_birtday.invalid) {
       this.form_birtday.markAllAsTouched();
       return;
-    }else if(this.form.invalid){
+    } else if (this.form.invalid) {
       this.form.markAllAsTouched();
       return;
     } else {
-      const myJson =  this.form.value;
+      const myJson = this.form.value;
       console.log(myJson);
-      
+
       await this.http.InsertRegister(myJson);
       // console.log(res);
     }
   }
   public ValidateForm() {
     this.form = this.builder.group({
-      customerEmail: [null, [Validators.required,Validators.minLength(10)]],
+      customerEmail: [null, [Validators.required, Validators.minLength(10)]],
       password: [null, Validators.required],
       customerFullName: [null, Validators.required],
       customerGender: ['m'],
-      customerTaxId:[null, Validators.required],
-    form_birtday: this.builder.group({
-      customerBirthDay:[null, Validators.required],
-      // customerPhone:[null, [Validators.required, Validators.minLength(10), Validators.pattern("^-?[0-9]\\d*(\\.\\d{1,2})?$")]],
-     }),
-     credentials: this.builder.array([
-     ]),
+      customerTaxId: [null, Validators.required],
+      form_birtday: this.builder.group({
+        customerBirthDay: [null, Validators.required],
+        // customerPhone:[null, [Validators.required, Validators.minLength(10), Validators.pattern("^-?[0-9]\\d*(\\.\\d{1,2})?$")]],
+      }),
+      credentials: this.builder.array([
+      ]),
     });
   }
   addPhone() {
@@ -63,11 +63,13 @@ export class RegisterComponent implements OnInit {
       customerPhone: [null, [Validators.required, Validators.minLength(10), Validators.pattern("^-?[0-9]\\d*(\\.\\d{1,2})?$")]],
     }));
   }
-  Remove(i){
+  Remove(i) {
     const creds = this.form.controls.credentials as FormArray;
     creds.removeAt(i);
     console.log(i);
   }
   get form_birtday(): any { return this.form.get('form_birtday') as FormGroup; }
   get Email(): any { return this.form.get('customerEmail'); }
+
+  get credentials() { return this.form.get('credentials') as FormArray; }
 }
