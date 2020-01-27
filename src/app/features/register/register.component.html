@@ -77,14 +77,14 @@
                         <div formArrayName="credentials" *ngFor="let creds of credentials.controls; let i = index;">
                             <ng-container [formGroupName]="i">
                                 <div class="inputarray"><input class="form-control" formControlName="customerPhone" type="text">
-                                    <div class="invalid-feedback">
+                                    <!-- <div class="invalid-feedback"> -->
                                         <!-- <small class="message-error"
                                          *ngIf="!!this.form.get('customerPhone')?.errors?.required  && this.form.get('customerPhone').touched"> Please choose a Tel.</small> -->
                                         <!-- <small class="message-error"
                                          *ngIf="!!this.form.get('customerPhone').errors?.pattern">Please input Number orly.</small>
                                          <small class="message-error"
                                          *ngIf="!!this.form.get('customerPhone').errors?.minlength">Please input Email More than 10 characters</small> -->
-                                    </div> 
+                                    <!-- </div>  -->
                                     <div *ngIf="i === 0" class="icon">   
                                         <span class="fa fa-plus fa-lg" (click)="addPhone()"></span>
                                     </div>
