@@ -1,9 +1,11 @@
-import { UserlistsService } from 'src/app/core/service/userlist.service';
+import { ResponseAPI } from './../../shared/models/response';
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from './../../../environments/environment';
-import { ResponseAPI } from 'src/app/shared/models/response';
+
 import { ProfileUser } from '../headder/headder.model';
+import { UserlistsService } from './userlist.service';
 
 @Injectable({ providedIn: 'root' })
 export class HttpService {

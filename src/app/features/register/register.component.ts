@@ -1,7 +1,8 @@
+import { HttpService } from './../../core/service/http-insert.service';
 import { Component, OnInit } from '@angular/core';
 import { RegisterForm } from '../register/model/register.model';
 import { FormGroup, FormControl, Validators, FormBuilder, FormArray } from '@angular/forms';
-import { HttpService } from 'src/app/core/service/http-insert.service';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

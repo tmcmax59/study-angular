@@ -4,9 +4,9 @@ import { environment } from './../../../environments/environment';
 @Injectable({ providedIn: 'root' })
 export class HttpService {
     constructor(private httpClient: HttpClient) { }
-    async InsertRegister( obj: object ){ 
+    async InsertRegister(obj: object) {
         const res = await this.httpClient.post(environment.apiInsert, obj).toPromise();
         return res;
-     }
+    }
 }
 
