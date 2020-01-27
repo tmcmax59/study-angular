@@ -1,0 +1,26 @@
+<section class="login-content">
+    <div class="login-box">
+        <div class="container">
+            <div class="text-center"><h1>เข้าสู่ระบบ</h1></div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <label for="">Username : </label>
+                    <input class="form-control" type="text" [(ngModel)]="username" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <label for="">Password : </label>
+                    <input class="form-control" type="password" [(ngModel)]="password" >
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 col-lg-12"><a routerLink="/register">สมัครสมาชิก</a></div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 col-lg-12"><button class="btn btn-primary" (click)="getLogin()">เข้าสู่ระบบ</button></div>
+            </div>
+        </div>
+    </div>
+</section>

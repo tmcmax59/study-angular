@@ -1,0 +1,45 @@
+<app-headder></app-headder>
+<!-- <div>{{email}} : {{fullname}}</div> -->
+<div class="box-main">
+        
+            <div class="box-seach">
+               <input type="text" placeholder="หมายเลขบริการ">
+               <button class="btn btn-primary"><i class="fa fa-search fa-lg"></i></button>
+            </div>
+        <div class="box-table">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">ลำดับ</th>
+                    <th scope="col">หมายเลขบริการ</th>
+                    <th scope="col">ลูกค้า</th>
+                    <th scope="col">วันที่เริ่มงาน</th>
+                    <th scope="col">สถานะ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr  routerLink="/product/product-detail">
+                    <th scope="row">1</th>
+                    <td>FRS202001010001</td>
+                    <td>สตาบัค สาขา เซนทรัล</td>
+                    <td>2020-01-01</td>
+                    <td><span class="badge badge-pill badge-success">จบงาน</span></td>
+                  </tr>
+                  <tr routerLink="/product/product-detail">
+                    <th scope="row">2</th>
+                    <td>FRS202001010002</td>
+                    <td>KFC สาขา สยาม</td>
+                    <td>2020-01-01</td>
+                    <td><span class="badge badge-pill badge-warning">กำลังดำเนินการ</span></td>
+                  </tr>
+                  <tr routerLink="/product/product-detail">
+                    <th scope="row">3</th>
+                    <td>FRS202001010003</td>
+                    <td>MK สาขา สยาม</td>
+                    <td>2020-01-01</td>
+                    <td><span class="badge badge-pill badge-warning">รอเปลี่ยนอุปกรณ์ซ่อม</span></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+</div>

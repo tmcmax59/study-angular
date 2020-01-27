@@ -1,0 +1,12 @@
+body{
+    background-color: #f1f4f6 !important;
+}
+.box-main{
+    height:140vh;
+    background-color: white;
+    margin:15px 10px;
+    box-shadow: 2px 2px 5px gray;
+    z-index: -1;
+    
+}
+

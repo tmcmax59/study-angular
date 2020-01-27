@@ -1,0 +1,75 @@
+.profile-user {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 5px;
+    font-family: 'monospace';
+    position: absolute;
+    right: 50px;
+
+}
+.app-sidebar__user-avatar {
+    border-radius: 50% !important;
+    width: 35px;
+    margin-right: 8px;
+}
+.detail-user {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: 1.3;
+}
+.sub-detail-user {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.3;
+}
+a.nav-icon{
+    display: block;
+    
+    line-height: 20px;
+    color: #474040;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    color:white;
+    
+}
+.box-list-dropdown{
+    position: absolute;
+    transform: translate3d(-117px, 50px, 0px);
+    top: -11px;
+    /* left: 0px; */
+    will-change: transform;
+    right: -105px;
+    font-size: 10px;
+}
+.dropdown-menu.show{
+    display: block;
+}
+.dropdown-item:hover, .dropdown-item:focus{
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+a{
+    cursor: pointer !important;
+}
+.navbar{
+    // border: 0.5px solid black;
+    box-shadow: 1px 0px 5px gray;
+    background-color: #1E90FF;
+    color:white;
+}
+span.burker{
+    cursor: pointer;
+    color:white !important;
+}

@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light">
+        <a routerLink="/home"><span class="burker"><i class="fa fa-bars fa-lg"></i></span></a>
+    <div class="profile-user">
+        <img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+        <div>
+        <p class="detail-user">{{user}}</p>
+            <p class="sub-detail-user">Frontend Developer</p>
+        </div>
+    </div>
+    <a class="nav-icon" data-toggle="dropdown" aria-label="Open Profile Menu" aria-haspopup="true" aria-expanded="false" href="#"><span class="fa fa-cog fa-lg"></span></a>
+    <ul class="dropdown-menu settings-menu dropdown-menu-right box-list-dropdown" x-placement="bottom-end">
+        <li><a class="dropdown-item" routerLink="/profile"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+        <li><a class="dropdown-item" (click)="logout()"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+    </ul>
+</nav>
