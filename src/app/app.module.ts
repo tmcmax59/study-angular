@@ -14,6 +14,7 @@ import { HeadderComponent } from './core/headder/headder.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './features/home/home.component';
 import { ProductDetailComponent } from './features/product/product-detail/product-detail.component';
+import { DetailDataProductlistComponent } from './features/product/containers/detail-data-productlist/detail-data-productlist.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProductDetailComponent } from './features/product/product-detail/produc
     ProfileComponent,
     HeadderComponent,
     HomeComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    DetailDataProductlistComponent
   ],
   imports: [
     BrowserModule,

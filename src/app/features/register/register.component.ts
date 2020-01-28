@@ -18,25 +18,7 @@ export class RegisterComponent implements OnInit {
     this.addPhone();
     // console.log(this.credentials.at(0).get('customerPhone').errors);
   }
-  proscess_param(){
-
-  }
   async Onsubmit() {
-    // console.log(this.credentials.at(0).get('customerPhone').errors);
-    // this.form.get('password').markAsTouched();
-    // this.form.get('customerFullName').markAsTouched();
-    // this.form.get('customerBirthDay').markAsTouched();
-    // this.form.get('customerPhone').markAsTouched();
-    // this.form.get('customerTaxId').markAsTouched();
-    // if(!this.form_birtday.markAllAsTouched()){
-    //   return;
-    // }else{
-    //   this.form.markAllAsTouched()
-    // }
-    // if (this.form_birtday.invalid) {
-    //   this.form_birtday.markAllAsTouched();
-    //   return;
-    // } else if (this.form.invalid) {
       this.form.markAllAsTouched();
       if(this.form.invalid){
         return;
@@ -51,17 +33,9 @@ export class RegisterComponent implements OnInit {
           "customerTaxId": this.form.get('customerTaxId').value,
         };
           console.log(myJson);
-          const res: object  = await this.http.InsertRegister(myJson);
+          const res  = await this.http.InsertRegister(myJson);
           console.log(res);
       }
-    //   
-    // } else {
-    //   const myJson = this.form.value;
-    //   console.log(myJson);
-
-    //   await this.http.InsertRegister(myJson);
-      // console.log(res);
-    // }
   }
   public ValidateForm() {
     this.form = this.builder.group({

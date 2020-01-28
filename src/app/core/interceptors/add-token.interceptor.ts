@@ -14,7 +14,9 @@ export class AddTokenInterceptor implements HttpInterceptor {
         'http://localhost:4200/login'
     ];
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        if (req.url != environment.apiLogin) {
+        // console.log(req.url);return;
+        
+        if (req.url != environment.apiLogin && req.url != environment.apiInsert) {
             const authReq = this.addToken(req);
             return next.handle(authReq);
         }
