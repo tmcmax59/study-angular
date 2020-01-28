@@ -59,7 +59,7 @@
                             <ng-container [formGroupName]="i">
                                 <div class="inputarray">
                                     <input class="form-control"  formControlName="customerPhone" type="text"
-                                    [ngClass]="{ 'is-invalid': credentials.at(i).get('customerPhone').errors}">
+                                    >
                                     <div *ngIf="i === 0" class="icon">   
                                         <span class="fa fa-plus fa-lg" (click)="addPhone()"></span>
                                     </div>
@@ -68,7 +68,9 @@
                                     </div>
                                 </div>
                                 <small class="message-error"
-                                *ngIf="credentials.at(i).get('customerPhone').errors?.required">Please choose a Tel.</small>
+                                    *ngIf="credentials.at(i).get('customerPhone').invalid && 
+                                    (credentials.at(i).get('customerPhone').dirty || credentials.at(i).get('customerPhone').touched) && 
+                                    credentials.at(i).get('customerPhone').errors?.required">Please choose a Tel.</small>
                                 <small class="message-error"
                                 *ngIf="credentials.at(i).get('customerPhone').errors?.minlength">Please input More than 10 characters</small>
                             </ng-container>

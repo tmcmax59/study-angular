@@ -16,7 +16,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
     this.ValidateForm();
     this.addPhone();
-    console.log(this.credentials.at(0).get('customerPhone').errors);
+    // console.log(this.credentials.at(0).get('customerPhone').errors);
+  }
+  proscess_param(){
+
   }
   async Onsubmit() {
     // console.log(this.credentials.at(0).get('customerPhone').errors);
@@ -35,7 +38,23 @@ export class RegisterComponent implements OnInit {
     //   return;
     // } else if (this.form.invalid) {
       this.form.markAllAsTouched();
-    //   return;
+      if(this.form.invalid){
+        return;
+      }else{
+        const myJson = {
+          "customerEmail" : this.form.get('customerEmail').value,
+          "password": this.form.get('password').value,
+          "customerFullName": this.form.get('customerFullName').value,
+          "customerBirthDay": this.form_birtday.get('customerBirthDay').value,
+          "customerGender": this.form.get('customerGender').value,
+          "customerPhone": this.credentials.at(0).get('customerPhone').value,
+          "customerTaxId": this.form.get('customerTaxId').value,
+        };
+          console.log(myJson);
+          const res: object  = await this.http.InsertRegister(myJson);
+          console.log(res);
+      }
+    //   
     // } else {
     //   const myJson = this.form.value;
     //   console.log(myJson);
