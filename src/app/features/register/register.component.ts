@@ -16,9 +16,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
     this.ValidateForm();
     this.addPhone();
+    console.log(this.credentials.at(0).get('customerPhone').errors);
   }
   async Onsubmit() {
-    // this.form.get('customerEmail').markAsTouched();
+    // console.log(this.credentials.at(0).get('customerPhone').errors);
     // this.form.get('password').markAsTouched();
     // this.form.get('customerFullName').markAsTouched();
     // this.form.get('customerBirthDay').markAsTouched();
@@ -29,23 +30,23 @@ export class RegisterComponent implements OnInit {
     // }else{
     //   this.form.markAllAsTouched()
     // }
-    if (this.form_birtday.invalid) {
-      this.form_birtday.markAllAsTouched();
-      return;
-    } else if (this.form.invalid) {
+    // if (this.form_birtday.invalid) {
+    //   this.form_birtday.markAllAsTouched();
+    //   return;
+    // } else if (this.form.invalid) {
       this.form.markAllAsTouched();
-      return;
-    } else {
-      const myJson = this.form.value;
-      console.log(myJson);
+    //   return;
+    // } else {
+    //   const myJson = this.form.value;
+    //   console.log(myJson);
 
-      await this.http.InsertRegister(myJson);
+    //   await this.http.InsertRegister(myJson);
       // console.log(res);
-    }
+    // }
   }
   public ValidateForm() {
     this.form = this.builder.group({
-      customerEmail: [null, [Validators.required, Validators.minLength(10)]],
+      customerEmail: [null, [Validators.required, Validators.email]],
       password: [null, Validators.required],
       customerFullName: [null, Validators.required],
       customerGender: ['m'],
@@ -57,11 +58,12 @@ export class RegisterComponent implements OnInit {
       credentials: this.builder.array([
       ]),
     });
+    
   }
   addPhone() {
     const creds = this.form.controls.credentials as FormArray;
     creds.push(this.builder.group({
-      customerPhone: [null, [Validators.required, Validators.minLength(10), Validators.pattern("^-?[0-9]\\d*(\\.\\d{1,2})?$")]],
+      customerPhone: ['', [Validators.required, Validators.minLength(10)]],
     }));
   }
   Remove(i) {

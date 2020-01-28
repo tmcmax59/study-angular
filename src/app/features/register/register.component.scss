@@ -36,22 +36,17 @@
     width: 100%;
 }
 // validata
-// .form-control.ng-pristine.ng-invalid.ng-touched,
-// .form-control.ng-touched.ng-dirty.ng-invalid{
-    
-//     border-color:red;
-// }
-// .form-control.ng-pristine.ng-invalid.ng-touched:focus,
-// .form-control.ng-invalid.ng-dirty.ng-touched:focus{
-//     border-color:red;
-//     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, .25);
-// }
+.form-control.ng-pristine.ng-invalid.ng-touched,
+.form-control.ng-touched.ng-dirty.ng-invalid{
 
-// .form-control.ng-pristine.ng-invalid.ng-touched ~ .invalid-feedback,
-// .form-control.ng-touched.ng-dirty.ng-invalid ~ .invalid-feedback
-// {
-//     display: block;
-// }
+    border-color:red;
+}
+.form-control.ng-pristine.ng-invalid.ng-touched:focus,
+.form-control.ng-invalid.ng-dirty.ng-touched:focus{
+    border-color:red;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, .25);
+}
+
 .form-radio{
     margin: 10px;
     padding: 5px;
@@ -68,7 +63,7 @@ span{
 }
 .inputarray{
         // display: flex;
-        margin: 0  0 15px ;
+        margin: 0  0 10px ;
         display: -webkit-box;
 
 }
@@ -77,4 +72,5 @@ span{
 }
 .message-error {
     color: orangered;
+    font-size: 10px;
 }
