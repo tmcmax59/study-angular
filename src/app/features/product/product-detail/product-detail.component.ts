@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
-
-  constructor() { }
+  customerId: any;
+  constructor(private route: Router) {
+    this.customerId = this.route.params.id;
+   }
 
   ngOnInit() {
   }

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { ProductList } from '../../product';
 
@@ -8,12 +9,13 @@ import { ProductList } from '../../product';
 })
 export class DetailDataProductlistComponent implements OnInit {
   @Input() products: ProductList;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     console.log(this.products);
   }
   getDetail(product){
-    console.log(product);
+      const url = '/product/product-detail/' + product ;
+      this.router.navigate([url]);
   }
 }
