@@ -12,7 +12,6 @@ export class DetailDataProductlistComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    console.log(this.products);
   }
   getDetail(product){
       const url = '/product/product-detail/' + product ;

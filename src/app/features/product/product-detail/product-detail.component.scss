@@ -24,3 +24,18 @@ span.icon{
     padding: 5px 10px;
     margin: 5px 10px;
 }
+.crumb  {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+   
+    margin:10px 0;
+  
+    list-style: none;
+    // background-color: #e9ecef;
+    border-radius: .25rem;
+}
+.crumb ol{
+    margin: 0px;
+}

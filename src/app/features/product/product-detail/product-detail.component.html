@@ -1,25 +1,34 @@
 <app-headder></app-headder>
+<div class="row">
+<nav>
+<ol class="crumb">
+        <li class="breadcrumb-item"><a href="#" routerLink="/product/product-list">รายการ</a></li>
+        <li class="breadcrumb-item active" aria-current="page">รายละเอียดของงาน</li>
+</ol>
+</nav>
+</div>
 <div class="box-main">
     <div class="detail-opd">
+        
         <div class="row">
             <div class="col-sm-6">
-                หมายเลขบริการ : FRS202001010001
+               หมายเลขบริการ : {{customerDetail.serviceNo}}
             </div>
             <div class="col-sm-6">
-                ลูกค้า : สตาบัค สาขา เซนทรัล
+                ลูกค้า : {{customerDetail.customerF}}
             </div>
         </div>
         <div class="row">
                 <div class="col-sm-6">
-                        ชื่อผู้ติดต่อ : สมคิด สวยงาม
+                        ชื่อผู้ติดต่อ : {{customerDetail.Fname}}
                 </div>
                 <div class="col-sm-6">
-                        เบอร์ติดต่อ : 089-999-8999
+                        เบอร์ติดต่อ : {{customerDetail.tel}}
                 </div>
         </div>
         <div class="row">
                 <div class="col-sm-12">
-                        รายละเอียดงาน : ท่อรั่ว
+                        รายละเอียดงาน : {{customerDetail.detail_service}}
                 </div>
         </div>
     </div>

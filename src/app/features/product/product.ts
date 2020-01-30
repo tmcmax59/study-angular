@@ -5,3 +5,11 @@ export interface ProductList {
     startTime: any;
     status: any;
 }
+
+export interface ProductDetail {
+    serviceNo: string;
+    customerF: string;
+    Fname: string;
+    tel: string;
+    detail_service: string;
+}

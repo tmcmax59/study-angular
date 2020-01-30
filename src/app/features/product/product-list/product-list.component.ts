@@ -39,7 +39,7 @@ export class ProductListComponent implements OnInit {
   email: string;
   fullname: string;
   ngOnInit() {
-    console.log(this.productList);
+    
   }
   
 }
