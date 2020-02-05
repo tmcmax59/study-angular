@@ -1,0 +1,75 @@
+
+.crumb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    margin: 10px 0;
+
+    list-style: none;
+    // background-color: #e9ecef;
+    border-radius: .25rem;
+}
+
+.crumb ol {
+    margin: 0px;
+}
+
+// Button
+.btn{
+    font-size: 10px !important;
+    padding: 2px 5px !important;
+}
+a{
+    margin: 3px;
+}
+.form-control{
+    font-size: 10px !important;
+    padding: 3px 5px !important;
+    height: fit-content !important;
+}
+option{
+    padding: 3px 5px !important;
+}
+.s-text-12{
+    font-size: 10px;
+}
+.input-group-text{
+    font-size: 10px !important;
+    padding: 3px 5px !important;
+}
+.loading-component .overlay
+{  
+  background-color: #000;
+  height: 100vh;
+  left: 0;
+  opacity: 0.5;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 9999999;
+}
+
+.loading-component img
+{
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999999;
+}
+button{
+    margin: 3px;
+}
+img.icon{
+    width: 17px;
+}
+.title{
+    font-size: 0.75em;
+    color: black;
+    margin: 0px;
+}
+.card-header{
+    padding: 5px 10px !important;
+}
