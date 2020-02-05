@@ -1,98 +1,114 @@
 <app-headder></app-headder>
 <div class="row">
-<nav>
-<ol class="crumb">
-        <li class="breadcrumb-item"><a href="#" routerLink="/product/product-list">รายการ</a></li>
-        <li class="breadcrumb-item active" aria-current="page">รายละเอียดของงาน</li>
-</ol>
-</nav>
+        <nav>
+                <ol class="crumb">
+                        <li class="breadcrumb-item"><a href="#" routerLink="/product/product-list">รายการ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">รายละเอียดของงาน</li>
+                </ol>
+        </nav>
 </div>
 <div class="box-main">
-    <div class="detail-opd">
-        
-        <div class="row">
-            <div class="col-sm-6">
-               หมายเลขบริการ : {{customerDetail.serviceNo}}
-            </div>
-            <div class="col-sm-6">
-                ลูกค้า : {{customerDetail.customerF}}
-            </div>
-        </div>
-        <div class="row">
-                <div class="col-sm-6">
-                        ชื่อผู้ติดต่อ : {{customerDetail.Fname}}
+        <div class="detail-opd">
+
+                <div class="row">
+                        <div class="col-sm-6">
+                                หมายเลขบริการ : {{customerDetail.serviceNo}}
+                        </div>
+                        <div class="col-sm-6">
+                                ลูกค้า : {{customerDetail.customerF}}
+                        </div>
                 </div>
-                <div class="col-sm-6">
-                        เบอร์ติดต่อ : {{customerDetail.tel}}
+                <div class="row">
+                        <div class="col-sm-6">
+                                ชื่อผู้ติดต่อ : {{customerDetail.Fname}}
+                        </div>
+                        <div class="col-sm-6">
+                                เบอร์ติดต่อ : {{customerDetail.tel}}
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-sm-12">
+                                รายละเอียดงาน : {{customerDetail.detail_service}}
+                        </div>
                 </div>
         </div>
-        <div class="row">
-                <div class="col-sm-12">
-                        รายละเอียดงาน : {{customerDetail.detail_service}}
+        <div class="box-crad">
+                <div class="card">
+                        <div class="card-header">
+                                หน้าร้าน <span class="icon"><i class="fa fa-camera fa-lg"></i></span>
+                        </div>
+                        <div class="card-body">
+                                <div class="album-main box-img">
+                                        <img src="https://i.pinimg.com/564x/64/88/31/6488312c892e86ece369d3907041d523.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/b8/cc/4b/b8cc4bb8d4371eb7ba1528ef02f8b354.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg"
+                                                alt="">
+                                </div>
+                        </div>
                 </div>
         </div>
-    </div>
-    <div class="box-crad">
-            <div class="card">
-            <div class="card-header">
-                หน้าร้าน <span class="icon"><i class="fa fa-camera fa-lg"></i></span>
-            </div>
-            <div class="card-body">
-                    <div class="album-main box-img">
-                        <img src="https://i.pinimg.com/564x/64/88/31/6488312c892e86ece369d3907041d523.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/b8/cc/4b/b8cc4bb8d4371eb7ba1528ef02f8b354.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg" alt="">
-                    </div>
-            </div>
-            </div>
-    </div>
-    <div class="box-crad">
-            <div class="card">
-            <div class="card-header">
-            อุปกรณ์ก่อนทำ<span class="icon"><i class="fa fa-camera fa-lg"></i></span>
-            </div>
-            <div class="card-body">
-                    <div class="album-main box-img">
-                        <img src="https://i.pinimg.com/564x/64/88/31/6488312c892e86ece369d3907041d523.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/b8/cc/4b/b8cc4bb8d4371eb7ba1528ef02f8b354.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg" alt="">
-                    </div>
-            </div>
-            </div>
-    </div>
-    <div class="box-crad">
-            <div class="card">
-            <div class="card-header">
-                อุปกรณ์เปลี่ยน<span class="icon"><i class="fa fa-camera fa-lg"></i></span>
-            </div>
-            <div class="card-body">
-                    <div class="album-main box-img">
-                        <img src="https://i.pinimg.com/564x/64/88/31/6488312c892e86ece369d3907041d523.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/b8/cc/4b/b8cc4bb8d4371eb7ba1528ef02f8b354.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg" alt="">
-                    </div>
-            </div>
-            </div>
-    </div>
-    <div class="box-crad">
-            <div class="card">
-            <div class="card-header">
-                อุปกรณ์หลังเปลี่ยน<span class="icon"><i class="fa fa-camera fa-lg"></i></span>
-            </div>
-            <div class="card-body">
-                    <div class="album-main box-img">
-                        <img src="https://i.pinimg.com/564x/64/88/31/6488312c892e86ece369d3907041d523.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/b8/cc/4b/b8cc4bb8d4371eb7ba1528ef02f8b354.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg" alt="">
-                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg" alt="">
-                    </div>
-            </div>
-            </div>
-    </div>
-    
-    
-   
+        <div class="box-crad">
+                <div class="card">
+                        <div class="card-header">
+                                อุปกรณ์ก่อนทำ<span class="icon"><i class="fa fa-camera fa-lg"></i></span>
+                        </div>
+                        <div class="card-body">
+                                <div class="album-main box-img">
+                                        <img src="https://i.pinimg.com/564x/64/88/31/6488312c892e86ece369d3907041d523.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/b8/cc/4b/b8cc4bb8d4371eb7ba1528ef02f8b354.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg"
+                                                alt="">
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div class="box-crad">
+                <div class="card">
+                        <div class="card-header">
+                                อุปกรณ์เปลี่ยน<span class="icon"><i class="fa fa-camera fa-lg"></i></span>
+                        </div>
+                        <div class="card-body">
+                                <div class="album-main box-img">
+                                        <img src="https://i.pinimg.com/564x/64/88/31/6488312c892e86ece369d3907041d523.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/b8/cc/4b/b8cc4bb8d4371eb7ba1528ef02f8b354.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg"
+                                                alt="">
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div class="box-crad">
+                <div class="card">
+                        <div class="card-header">
+                                อุปกรณ์หลังเปลี่ยน<span class="icon"><i class="fa fa-camera fa-lg"></i></span>
+                        </div>
+                        <div class="card-body">
+                                <div class="album-main box-img">
+                                        <img src="https://i.pinimg.com/564x/64/88/31/6488312c892e86ece369d3907041d523.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/b8/cc/4b/b8cc4bb8d4371eb7ba1528ef02f8b354.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg"
+                                                alt="">
+                                        <img src="https://i.pinimg.com/564x/be/a1/2d/bea12d20ac88c7e8df0e08d653e3485a.jpg"
+                                                alt="">
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+
+
 </div>

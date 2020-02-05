@@ -11,7 +11,7 @@ export class ProductDetailComponent implements OnInit {
   // data_detail: ProductDetail [] = [];
   customerId: string;
   customerDetail: ProductDetail;
-  detail_list: ProductDetail [] = [{
+  detail_list: ProductDetail[] = [{
     serviceNo: '15646846',
     customerF: 'สตาบัค สาขา เซนทรัล',
     Fname: 'นายสมหมาย',
@@ -32,12 +32,12 @@ export class ProductDetailComponent implements OnInit {
     tel: '081-233-1233',
     detail_service: 'ปั้มน้ำระเบิด'
   }
-];
-  
+  ];
+
   constructor(private route: ActivatedRoute) {
-  this.customerId = this.route.snapshot.params.id;
-  this.getDetail();
-   }
+    this.customerId = this.route.snapshot.params.id;
+    this.getDetail();
+  }
   ngOnInit() {
   }
   getDetail() {

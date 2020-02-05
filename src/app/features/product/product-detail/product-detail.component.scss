@@ -1,41 +1,47 @@
-.album-main{
+.album-main {
     display: flex;
     flex-direction: row;
 
     flex-wrap: nowrap;
     overflow-x: auto;
 }
-img{
+
+img {
     width: 150px;
     height: 150px;
     margin: 0px 10px;
 }
-.box-crad{
+
+.box-crad {
     padding: 10px 10px;
     margin: 10px 10px;
 }
-span.icon{
+
+span.icon {
     position: absolute;
     right: 0;
     padding-right: 20px;
     cursor: pointer;
 }
-.detail-opd{
+
+.detail-opd {
     padding: 5px 10px;
     margin: 5px 10px;
 }
-.crumb  {
+
+.crumb {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-   
-    margin:10px 0;
-  
+
+    margin: 10px 0;
+
     list-style: none;
     // background-color: #e9ecef;
     border-radius: .25rem;
 }
-.crumb ol{
+
+.crumb ol {
     margin: 0px;
 }

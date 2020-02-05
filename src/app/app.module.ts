@@ -1,3 +1,4 @@
+import { Loading } from './shared/models/function';
 import { AppInitializationModule } from './app-initialization.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './features/home/home.component';
 import { ProductDetailComponent } from './features/product/product-detail/product-detail.component';
 import { DetailDataProductlistComponent } from './features/product/containers/detail-data-productlist/detail-data-productlist.component';
+import { UiComponent } from './features/ui/ui/ui.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { DetailDataProductlistComponent } from './features/product/containers/de
     HeadderComponent,
     HomeComponent,
     ProductDetailComponent,
-    DetailDataProductlistComponent
+    DetailDataProductlistComponent,
+    UiComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,9 @@ import { DetailDataProductlistComponent } from './features/product/containers/de
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    Loading
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

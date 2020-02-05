@@ -5,6 +5,7 @@ import { LoginComponent } from './features/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductDetailComponent } from './features/product/product-detail/product-detail.component';
+import { UiComponent } from './features/ui/ui/ui.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,11 @@ const routes: Routes = [
     path: 'home',
     // loadChildren: () => import('. /core/core.module').then(mod => mod.CoreModule),
     component: HomeComponent
+  },
+  {
+    path: 'ui',
+    // loadChildren: () => import('. /core/core.module').then(mod => mod.CoreModule),
+    component: UiComponent
   },
 ];
 

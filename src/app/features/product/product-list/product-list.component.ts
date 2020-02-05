@@ -1,3 +1,4 @@
+import { FormGroup, FormControl } from '@angular/forms';
 import { ProductList } from './../product';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ProductListComponent implements OnInit {
-
+  
   productList: ProductList[] = [
     {
     No: 1,
@@ -35,9 +36,11 @@ export class ProductListComponent implements OnInit {
   }
 ];
   constructor(private router: Router) {
+    
    }
   email: string;
   fullname: string;
+  
   ngOnInit() {
     
   }
